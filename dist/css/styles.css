@@ -10971,26 +10971,44 @@ html {
   max-width: 30rem;
 }
 
+/* Estilo para el footer */
 footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-footer.footer .social-link {
-  display: block;
-  text-decoration: none;
-  height: 4rem;
-  width: 4rem;
-  line-height: 4.3rem;
-  font-size: 1.5rem;
-  background-color: #1D809F;
-  transition: background-color 0.15s ease-in-out;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-}
-footer.footer .social-link:hover {
-  background-color: #155d74;
-  text-decoration: none;
+  padding-top: 5rem; /* Espacio en la parte superior del footer */
+  padding-bottom: 5rem; /* Espacio en la parte inferior del footer */
+  background-color: #0056b3; /* Color de fondo azul */
 }
 
+/* Estilo para el texto motivacional */
+footer.footer .motivational-text {
+  color: #FFFFFF; /* Color blanco para el texto motivacional */
+  font-size: 1.5rem; /* Tamaño de fuente visible para la frase motivadora */
+  margin-bottom: 2rem; /* Espacio debajo de la frase motivadora */
+}
+
+/* Cambiar el color del texto de los párrafos en el footer a blanco */
+footer.footer p {
+  color: #FFFFFF; /* Color blanco para los otros textos */
+}
+
+/* Estilo para los íconos de redes sociales */
+footer.footer .social-link {
+  display: block;
+  text-decoration: none; /* Sin subrayado en el enlace */
+  height: 4rem; /* Altura del icono */
+  width: 4rem; /* Ancho del icono */
+  line-height: 4.3rem; /* Alineación vertical del texto */
+  font-size: 1.5rem; /* Tamaño del ícono */
+  background-color: #1D809F; /* Color de fondo del ícono */
+  color: #FFFFFF; /* Color blanco para el ícono */
+  transition: background-color 0.15s ease-in-out; /* Transición para el hover */
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); /* Sombra del ícono */
+}
+
+/* Color de los íconos al pasar el mouse */
+footer.footer .social-link:hover {
+  background-color: #155d74; /* Cambia el fondo al hacer hover */
+  text-decoration: none; /* Sin subrayado en el hover */
+}
 .map {
   height: 30rem;
 }
@@ -11107,4 +11125,96 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+/* Estilo personalizado para el botón "Conoce más sobre mí" */
+.btn-custom {
+  background-color: #6a5acd; /* Color de fondo: azul claro */
+  color: white; /* Color del texto: blanco */
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 15px 30px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+  border: 2px solid transparent; /* Borde transparente */
+}
+
+/* Efecto al pasar el cursor */
+.btn-custom:hover {
+  background-color: #483d8b; /* Color de fondo al pasar el cursor: azul oscuro */
+  color: #f0e68c; /* Cambiar el color del texto: amarillo claro */
+  border: 2px solid #f0e68c; /* Borde amarillo claro */
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+/* Efecto al hacer clic */
+.btn-custom:active {
+  background-color: #5b5ea6; /* Color de fondo al hacer clic: azul medio */
+  transform: scale(0.98); /* Efecto de reducción al hacer clic */
+}
+
+/* Estilo personalizado para el botón "Mis habilidades" */
+.btn-lila {
+  background-color: #8A2BE2; /* Color de fondo: lila más oscuro */
+  color: white; /* Color del texto: blanco */
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 15px 30px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease, transform 0.3s ease, border 0.3s ease; /* Efectos de transición */
+  border: 2px solid transparent; /* Borde transparente */
+}
+
+/* Efecto al pasar el cursor */
+.btn-lila:hover {
+  background-color: #7B68EE; /* Color de fondo al pasar el cursor: lila oscuro */
+  color: #f0e68c; /* Cambiar el color del texto: amarillo claro */
+  border: 2px solid #f0e68c; /* Borde amarillo claro */
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+/* Estilo para el título "Sobre Mí" */
+.title-sobre-mi {
+  color: #8A2BE2; /* Color lila */
+}
+
+.sobre-mi {
+  background-color: #F5F5F5; /* Color de fondo gris claro */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados (opcional) */
+}
+
+.text-justify {
+  text-align: justify; /* Justificar el texto */
+}
+.contact-form {
+    max-width: 600px; /* Limita el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario */
+    padding: 20px; /* Espacio interno */
+}
+
+.contact-form h3 {
+    font-weight: bold;
+    color: #333; /* Color del título */
+}
+
+.contact-form .form-control {
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ced4da; /* Color del borde */
+}
+
+.contact-form .form-control:focus {
+    border-color: #4CAF50; /* Color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Sombra al enfocar */
+}
+
+.contact-form .btn-primary {
+    background-color: #4CAF50; /* Color del botón */
+    border-color: #4CAF50; /* Color del borde del botón */
+    padding: 10px 20px; /* Espacio interno del botón */
+    font-size: 16px; /* Tamaño de la fuente del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+    border-color: #45a049; /* Color del borde al pasar el mouse */
 }
