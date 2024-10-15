@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ñ<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -10,6 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <!-- Simple line icons-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -198,7 +199,7 @@
         <!-- Map-->
         <div class="contact-form" id="contact">
             <h3 class="text-center mb-4">Ponte en contacto conmigo.</h3>
-            <form action="https://formsubmit.co/lopezyessica824@gmail.com" method="POST">
+            <form id="contact-form">
                 <div class="form-group mb-3">
                     <label for="name" class="form-label">Nombre:</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
@@ -212,9 +213,12 @@
                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                <p id="status-message" style="display:none; color: green;">Mensaje enviado con éxito.</p>
             </form>
             
-            
+            <!-- Mensajes de éxito y error -->
+            <div id="success-message" class="mt-3" style="display: none; color: green;">Mensaje enviado</div>
+            <div id="error-message" class="mt-3" style="display: none; color: red;">Error al enviar el mensaje</div>   
         </div>
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">
@@ -222,26 +226,34 @@
                 <ul class="list-inline mb-5">
                     <li class="list-inline-item">
                         <!-- Ícono de Facebook -->
-                        <a class="social-link rounded-circle" href=" https://www.facebook.com/profile.php?id=100010223161000&mibextid=ZbWKwL">
-                            <i class="icon-social-facebook"></i>
+                        <a class="social-link rounded-circle" href="https://www.facebook.com/profile.php?id=100010223161000&mibextid=ZbWKwL">
+                            <div class="circle">
+                                <i class="icon-social-facebook"></i>
+                            </div>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <!-- Ícono de GitHub -->
                         <a class="social-link rounded-circle" href="https://github.com/yessicaaraceli101">
-                            <i class="icon-social-github"></i>
+                            <div class="circle">
+                                <i class="icon-social-github"></i>
+                            </div>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <!-- Ícono de LinkedIn -->
-                        <a class="social-link rounded-circle" href=" https://www.linkedin.com/in/yessicaaracelilopez10?utm_source=share&utm_campaign=shar e_via&utm_content=profile&utm_medium=android_app">
-                            <i class="icon-social-linkedin"></i>
+                        <a class="social-link rounded-circle" href="https://www.linkedin.com/in/yessicaaracelilopez10?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                            <div class="circle">
+                                <i class="icon-social-linkedin"></i>
+                            </div>
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <!-- Ícono de Instagram -->
                         <a class="social-link rounded-circle" href="https://www.instagram.com/yessica_araceli_10?igsh=YWMxdTl0bHRhejM=">
-                            <i class="icon-social-instagram"></i>
+                            <div class="circle">
+                                <i class="icon-social-instagram"></i>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -264,3 +276,4 @@
 
     </body>
 </html>
+

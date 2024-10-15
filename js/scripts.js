@@ -66,15 +66,33 @@ function fadeOut(el) {
         }
     })();
 };
+// Inicializa EmailJS
+(function() {
+    emailjs.init("RunIpMyxWojmuvFvG"); 
+})();
 
-function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-    (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += .1) > 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-        }
-    })();
-};
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Crear el objeto de parámetros para enviar con EmailJS
+    const templateParams = {
+        from_name: name,       // Este debe coincidir con {{from_name}} en la plantilla
+        reply_to: email,       // Este debe coincidir con {{reply_to}} en la plantilla
+        message: message,      // Este debe coincidir con {{message}} en la plantilla
+    };
+
+    // Enviar el correo usando EmailJS
+    emailjs.send('service_8d873qn', 'template_nyi6nn9', templateParams) 
+        .then(function(response) {
+            // Mostrar mensaje de éxito
+            document.getElementById("status-message").style.display = "block";
+            document.getElementById("contact-form").reset(); // Limpiar el formulario
+        }, function(error) {
+            console.error('Error al enviar el formulario:', error);
+            alert("Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+        });
+});

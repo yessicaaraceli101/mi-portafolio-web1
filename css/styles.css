@@ -10971,11 +10971,11 @@ html {
   max-width: 30rem;
 }
 
-/* Estilo para el footer */
 footer.footer {
   padding-top: 5rem; /* Espacio en la parte superior del footer */
   padding-bottom: 5rem; /* Espacio en la parte inferior del footer */
   background-color: #0056b3; /* Color de fondo azul */
+  text-align: center; /* Centrar el contenido del footer */
 }
 
 /* Estilo para el texto motivacional */
@@ -10990,24 +10990,46 @@ footer.footer p {
   color: #FFFFFF; /* Color blanco para los otros textos */
 }
 
-/* Estilo para los íconos de redes sociales */
+/* Estilo para los enlaces de redes sociales */
 footer.footer .social-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Aumenta el tamaño */
+  height: 60px; /* Aumenta el tamaño */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  padding: 5px; /* Espacio alrededor del ícono */
+}
+
+.circle img, .circle i {
+  width: 35px; /* Tamaño del ícono */
+  height: 35px; /* Tamaño del ícono */
   display: block;
   text-decoration: none; /* Sin subrayado en el enlace */
-  height: 4rem; /* Altura del icono */
-  width: 4rem; /* Ancho del icono */
-  line-height: 4.3rem; /* Alineación vertical del texto */
-  font-size: 1.5rem; /* Tamaño del ícono */
-  background-color: #1D809F; /* Color de fondo del ícono */
   color: #FFFFFF; /* Color blanco para el ícono */
-  transition: background-color 0.15s ease-in-out; /* Transición para el hover */
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); /* Sombra del ícono */
 }
 
 /* Color de los íconos al pasar el mouse */
 footer.footer .social-link:hover {
   background-color: #155d74; /* Cambia el fondo al hacer hover */
   text-decoration: none; /* Sin subrayado en el hover */
+}
+
+/* Estilo para la lista de íconos */
+footer.footer .list-inline {
+  padding: 0; /* Eliminar padding por defecto */
+  margin: 0; /* Eliminar margin por defecto */
+  display: flex; /* Usar flexbox para alinear horizontalmente */
+  justify-content: center; /* Centrar horizontalmente los íconos */
+  list-style-type: none; /* Eliminar puntos de lista */
 }
 .map {
   height: 30rem;
